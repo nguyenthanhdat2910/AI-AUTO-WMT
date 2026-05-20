@@ -1,0 +1,8 @@
+interface:
+  display_name: "Flaky Test Analyzer"
+  short_description: "Debug Playwright failures → classify Flaky/Bug/Env → fix with 3-round limit → report"
+  brand_color: "#A32D2D"
+  default_prompt: "Analyze and fix the following test failure:"
+
+policy:
+  allow_implicit_invocation: true

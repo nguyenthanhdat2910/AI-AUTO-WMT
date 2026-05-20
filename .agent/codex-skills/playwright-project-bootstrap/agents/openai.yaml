@@ -1,0 +1,8 @@
+interface:
+  display_name: "Playwright Bootstrap"
+  short_description: "Init missing Playwright TS automation project"
+  brand_color: "#2563EB"
+  default_prompt: "Initialize Playwright TypeScript automation for this repository:"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Senior Test Automator"
+  short_description: "Convert AUTO/AUTO* test cases to Playwright TypeScript with POM architecture"
+  brand_color: "#2D8C3C"
+  default_prompt: "Implement the following test cases as Playwright automation scripts:"
+
+policy:
+  allow_implicit_invocation: true

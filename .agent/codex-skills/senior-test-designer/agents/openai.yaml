@@ -1,0 +1,8 @@
+interface:
+  display_name: "Senior Test Designer"
+  short_description: "Design test cases → .md draft for review → export CSV/XLSX when finalized"
+  brand_color: "#1E3A5F"
+  default_prompt: "Design test cases for the following User Story / Acceptance Criteria:"
+
+policy:
+  allow_implicit_invocation: true

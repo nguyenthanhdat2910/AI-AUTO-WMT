@@ -1,0 +1,8 @@
+interface:
+  display_name: "Senior Test Analyst"
+  short_description: "Analyze requirements → detect ambiguity → risk assessment → .md for review before test design"
+  brand_color: "#2E5A88"
+  default_prompt: "Analyze the following User Story / Acceptance Criteria:"
+
+policy:
+  allow_implicit_invocation: true

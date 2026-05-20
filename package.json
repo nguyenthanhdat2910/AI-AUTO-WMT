@@ -1,0 +1,27 @@
+{
+  "name": "ai-auto-wmt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:bo": "playwright test --project=BO --workers=1",
+    "test:bo:stg1": "cross-env TEST_ENV=STG1 playwright test --project=BO --workers=1",
+    "test:bo:stg3": "cross-env TEST_ENV=STG3 playwright test --project=BO --workers=1",
+    "test:bo:stg4": "cross-env TEST_ENV=STG4 playwright test --project=BO --workers=1",
+    "test:bo:uat": "cross-env TEST_ENV=UAT playwright test --project=BO --workers=1",
+    "test:bo:stg3:headed": "cross-env TEST_ENV=STG3 playwright test --project=BO --workers=1 --headed",
+    "test:bo:uat:headed": "cross-env TEST_ENV=UAT playwright test --project=BO --workers=1 --headed",
+    "test:wmt": "playwright test --project=WMT",
+    "test:auth:bo": "playwright test tests/setup/bo.auth.setup.ts --project=bo-setup",
+    "test:auth:wmt": "playwright test tests/setup/wmt.auth.setup.ts --project=wmt-setup",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.7",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.4.5"
+  }
+}
