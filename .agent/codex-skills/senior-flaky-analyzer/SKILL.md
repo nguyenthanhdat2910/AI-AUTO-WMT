@@ -38,6 +38,20 @@ description: >
 
 ---
 
+## 1A. PLAYWRIGHT REPORT RULE
+
+After running any local Playwright verification or debug command, always show
+the HTML report immediately:
+
+```bash
+npm run report
+```
+
+If the environment blocks opening the report server or browser, state the
+blocker and provide the command for the user to run manually.
+
+---
+
 ## 2. FAILURE CLASSIFICATION — 3 nhóm
 
 | Nhóm | Định nghĩa | Hành động |

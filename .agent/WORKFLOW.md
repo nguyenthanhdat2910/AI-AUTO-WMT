@@ -26,23 +26,38 @@ edit-column behavior, and export rules.
 
 ## Global File Approval Gate
 
-Before creating or updating any generated file, the agent must first present a
+Before creating or updating any repository file, including code, config,
+Markdown, generated artifacts, or documentation, the agent must first present a
 preview or file plan and wait for explicit user approval.
 
 This applies to:
 
+- code files such as `.ts`, `.js`, `.py`, and test/spec/page files
+- Markdown files such as `.md`
+- config files such as `package.json`, `playwright.config.ts`, and `tsconfig.json`
 - analysis files in `qa-artifacts/`
 - test case draft/export/import report files in `qa-artifacts/`
 - debug reports in `qa-artifacts/`
 - Playwright files under `tests/`
-- bootstrap/config files such as `package.json`, `playwright.config.ts`, and
-  setup skeletons
+- bootstrap files and setup skeletons
 
-Approval examples: `approved`, `ok save`, `save file`, `tạo file`, `ghi file`,
-or `apply`.
+Required approval keyword: `approved`.
 
-If approval is missing, the agent must not save the generated file. It should
-return the proposed content or summarize the planned file changes for review.
+If approval is missing, the agent must not create or update files. It should
+return the proposed content or summarize the planned file changes for review
+and wait for the user to reply `approved`.
+
+## Playwright Report Rule
+
+After running any local Playwright automation command, the agent must show the
+HTML report immediately by running:
+
+```bash
+npm run report
+```
+
+If the environment blocks opening the report server or browser, the agent must
+state that clearly and provide the same command for the user to run manually.
 
 ## 01 Requirement Analysis
 

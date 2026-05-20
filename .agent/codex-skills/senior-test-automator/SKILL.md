@@ -55,6 +55,20 @@ clear reason, continue this skill for POM/spec implementation.
 
 ---
 
+## 1A. PLAYWRIGHT REPORT RULE
+
+After running any local Playwright automation command, always show the HTML
+report immediately:
+
+```bash
+npm run report
+```
+
+If the environment blocks opening the report server or browser, state the
+blocker and provide the command for the user to run manually.
+
+---
+
 ## 2. TC → SCRIPT WORKFLOW
 
 ### 2.1 Phân loại input — AUTO vs AUTO*
