@@ -309,3 +309,77 @@ Mo Playwright report:
 ```bash
 npm run report
 ```
+
+## 14. Merge branch qc/devin vao main
+
+Dung khi ban da lam code tren branch `qc/devin` va muon dua code do vao branch `main`.
+
+### Cach viet tung lenh
+
+Chuyen sang branch `main`:
+
+```bash
+git checkout main
+```
+
+Lay code moi nhat cua `main` tu remote `origin`:
+
+```bash
+git pull origin main
+```
+
+Merge code tu branch `qc/devin` vao branch `main` hien tai:
+
+```bash
+git merge qc/devin
+```
+
+Push branch `main` sau khi merge len remote:
+
+```bash
+git push origin main
+```
+
+### Chuoi lenh day du
+
+```bash
+git checkout main
+git pull origin main
+git merge qc/devin
+git push origin main
+```
+
+### Giai thich nhanh
+
+- `git checkout main`: chuyen ve branch `main`.
+- `git pull origin main`: cap nhat branch `main` local bang code moi nhat tren GitHub.
+- `git merge qc/devin`: lay commit/code tu branch `qc/devin` merge vao `main`.
+- `git push origin main`: day branch `main` da merge len GitHub.
+
+### Kiem tra sau khi merge
+
+Kiem tra branch hien tai:
+
+```bash
+git branch --show-current
+```
+
+Kiem tra trang thai:
+
+```bash
+git status -sb
+```
+
+Kiem tra `qc/devin` da nam trong `main` chua:
+
+```bash
+git merge-base --is-ancestor qc/devin main
+```
+
+Neu lenh tren khong in loi va exit code = 0, nghia la `qc/devin` da duoc merge vao `main`.
+
+Co the xem log de xac nhan:
+
+```bash
+git log --oneline --decorate --graph --all -10
+```
